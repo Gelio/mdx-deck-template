@@ -122,3 +122,7 @@ Check the settings of the repository for a URL to the exported deck.
 For more documentation see the [mdx-deck][] repo.
 
 [mdx-deck]: https://github.com/jxnblk/mdx-deck
+
+## Author
+
+This template has been created by [Grzegorz Rozdzialik](https://github.com/Gelio).
