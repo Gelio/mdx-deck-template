@@ -1,7 +1,10 @@
-import { Head, Code, Appear, components as Components } from 'mdx-deck'
+import { Head, Code, Appear, components as Components, Notes } from 'mdx-deck'
 import { FullscreenCode, Split, SplitRight } from 'mdx-deck/layouts'
 
-export { default as theme } from './theme'
+import future from '@mdx-deck/themes/future'
+import highlight from '@mdx-deck/themes/syntax-highlighter-prism'
+
+export const themes = [future, highlight]
 
 <Head>
   <title>Presentation title</title>
@@ -22,9 +25,7 @@ Using a different layout
 - List item 1
 - List item 2
 
-```notes
-Presenter notes are also available
-```
+<Notes>Presenter notes are also available</Notes>
 
 ---
 
