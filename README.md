@@ -96,6 +96,10 @@ npm run build
 
 ## Publishing to GitHub Pages
 
+**WARNING! 🔴** This functionality is broken at the moment. See
+[the issue in the mdx-deck repository](https://github.com/jxnblk/mdx-deck/issues/535)
+for more information.
+
 To publish the slides to GitHub Pages:
 
 ```sh
