@@ -1,10 +1,6 @@
-import { Head, Code, Appear, components as Components, Notes } from "mdx-deck";
-import { FullscreenCode, Split, SplitRight } from "mdx-deck/layouts";
+import { theme as customizedTheme } from "./theme";
 
-import future from "@mdx-deck/themes/future";
-import highlight from "@mdx-deck/themes/syntax-highlighter-prism";
-
-export const themes = [future, highlight];
+export const theme = customizedTheme;
 
 <Head>
   <title>Presentation title</title>
@@ -16,7 +12,7 @@ Author: XYZ
 
 ---
 
-export default SplitRight;
+<Split>
 
 ## Task for today
 
@@ -25,11 +21,41 @@ Using a different layout
 - List item 1
 - List item 2
 
+See
+[layouts documentation](https://github.com/jxnblk/mdx-deck/blob/master/docs/layouts.md)
+for more information about layouts.
+
 <Notes>Presenter notes are also available</Notes>
+
+</Split>
 
 ---
 
-## A regular slide
+## A numbered list with steps
+
+<Steps>
+
+1. First
+2. Second
+3. Third, the last one
+
+</Steps>
+
+---
+
+## An unordered list with steps
+
+<Steps>
+
+- First
+- Second
+- Third, the last one
+
+</Steps>
+
+---
+
+## Slide with code
 
 ```javascript
 const withSome = "code";
@@ -41,6 +67,66 @@ interface AlsoTypescript {
 }
 
 const AndTSX = <div />;
+```
+
+---
+
+## An image with some caption
+
+import { ImageWithLabel } from "./components/ImageWithLabel";
+
+<ImageWithLabel label="Themes in mdx-deck">
+  <img src="https://github.com/jxnblk/mdx-deck/raw/master/docs/images/future.png" />
+</ImageWithLabel>
+
+---
+
+## A gif
+
+<img src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" />
+
+---
+
+## A video with controls
+
+<video
+  src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.mp4"
+  controls
+/>
+
+---
+
+## A video controlled with steps
+
+Press Right/Left to play/pause the video.
+
+import { PostponedVideo } from "./components/PostponedVideo";
+
+<PostponedVideo
+  src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.mp4"
+  loop
+  controls
+/>
+
+---
+
+## Highlighting other languages
+
+```python
+[f(x) if x is not None else '' for x in xs]
+```
+
+```rust
+struct Rust {
+  field: Rc<RefCell<SomeOtherStruct>>;
+}
+```
+
+```ruby
+def sum_eq_n?(arr, n)
+  return true if arr.empty? && n == 0
+  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
+end
 ```
 
 ---
