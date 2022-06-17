@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { updaters, withDeck } from 'mdx-deck';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { updaters, withDeck } from "mdx-deck";
+import styled from "styled-components";
 
 const transitionDuration = 400;
 
