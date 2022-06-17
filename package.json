@@ -8,7 +8,8 @@
     "help": "mdx-deck",
     "format": "prettier --write **/*.mdx components",
     "prepublish-deck": "npm run build",
-    "publish-deck": "gh-pages -d public"
+    "publish-deck": "gh-pages -d public",
+    "lint": "markdownlint '**/*.mdx' --ignore-path .gitignore"
   },
   "keywords": [],
   "author": "Grzegorz Rozdzialik",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@types/react": "^18.0.14",
     "gh-pages": "^4.0.0",
+    "markdownlint": "^0.25.1",
     "prettier": "^2.7.1"
   },
   "name": "mdx-deck-template"
