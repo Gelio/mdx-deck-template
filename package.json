@@ -10,6 +10,7 @@
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
     "help": "mdx-deck",
+    "format": "prettier --write **/*.mdx components",
     "prepublish-deck": "npm run build",
     "publish-deck": "gh-pages -d dist"
   },
@@ -22,7 +23,8 @@
   },
   "devDependencies": {
     "@types/react": "^16.8.15",
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "prettier": "^2.7.1"
   },
   "name": "mdx-deck-template"
 }
